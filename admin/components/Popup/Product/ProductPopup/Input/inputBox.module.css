@@ -1,0 +1,53 @@
+.container {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    color: var(--text);
+    width: 240px;
+}
+
+.input {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.textArea {
+    display: flex;
+    height: 200px;
+}
+
+.buttonSave {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+@media (max-width: 971px) {
+    .container {
+        width: 100%;
+    }
+
+    .input {
+        flex-direction: column;
+    }
+
+    .text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .textArea {
+        flex-direction: column;
+        height: 200px;
+    }
+
+    .buttonSave {
+        justify-content: center;
+    }
+}

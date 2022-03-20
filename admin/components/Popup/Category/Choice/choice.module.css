@@ -1,0 +1,23 @@
+.choice {
+    height: 136px;
+    border: 2px solid var(--gray); 
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.menu {
+    border-bottom: 2px solid var(--gray);
+    padding: 10px;
+}
+
+.menu:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.menu > h4 {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text);
+    margin: 0;
+}

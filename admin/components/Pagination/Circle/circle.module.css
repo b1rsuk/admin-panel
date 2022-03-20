@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-around;
+    width: 275px;
+}
+
+.circle {
+    height: 55px;
+    width: 55px;
+    background-color: var(--silver);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle:hover {
+    background-color: var(--green);
+}
+
+.circle > h3 {
+    font-weight: 700;
+    font-size: 29px;
+    color: white;
+}
+
+@media (max-width: 476px) {
+    .circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle > h3 {
+        font-size: 20px;
+    }
+}

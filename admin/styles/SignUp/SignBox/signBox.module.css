@@ -1,0 +1,23 @@
+.box {
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 96px;
+}
+
+.box > h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40%;
+    margin-bottom: 75px;
+}
+

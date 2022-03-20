@@ -1,0 +1,19 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+}
+
+@media (max-width: 432px) {
+    .container {
+        width: 310px;
+    }
+    .container button {
+        width: 150px !important;
+    }
+}

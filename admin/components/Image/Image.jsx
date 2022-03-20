@@ -1,0 +1,10 @@
+import Image from 'next/image'
+
+const ImageCustom = ({src, alt, width, height}) => {
+    if (!src) return <Image layout="fixed" src={'/'} alt={alt} width={width} height={height}/>;
+    return (
+        <Image src={src} alt={alt} width={width} height={height}/>
+    );
+}
+
+export default ImageCustom;

@@ -1,0 +1,18 @@
+.navBar {
+    height: 100px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1111px) {
+    .navBar {
+        flex-direction: column;
+        height: 400px;
+        padding: 20px;
+    }
+    .navBar button {
+        height: 100px !important;
+    }
+}

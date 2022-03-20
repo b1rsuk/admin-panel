@@ -1,0 +1,12 @@
+.arrow {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow:hover {
+    opacity: 0.6;
+}

@@ -1,0 +1,22 @@
+.container {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination {
+    width: 450px;
+    height: 60px;
+    background-color: whitesmoke;
+    border-radius: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 476px) {
+    .pagination {
+        width: 300px;
+    }
+}

@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+}
+
+.navbar > h3 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.close {
+    cursor: pointer;
+}

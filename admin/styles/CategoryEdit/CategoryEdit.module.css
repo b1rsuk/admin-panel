@@ -1,0 +1,21 @@
+.adaptive {
+    width: 600px;
+    height: 360px;
+}
+
+.input > h3 {
+    width: 290px;
+    margin: 0;
+    color: var(--text);
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.save {
+    display: flex;
+    justify-content: flex-end;
+}

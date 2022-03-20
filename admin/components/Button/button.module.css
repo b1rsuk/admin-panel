@@ -1,0 +1,38 @@
+.button {
+    cursor: pointer;
+    color: white;
+    user-select: none;
+}
+.delete { 
+    border: 2px solid var(--red); 
+    background-color: var(--red); 
+}
+
+.delete:active {
+    background-color: var(--red2);
+}
+
+.light {
+    color: black;
+    border: 2px solid var(--ivory); 
+    background-color: var(--ivory);
+}
+
+.light:active {
+    background-color: var(--grey);
+}
+
+.green {
+    border: 2px solid var(--lime); 
+    background-color: var(--lime);
+}
+
+.green:active {
+    background-color: var(--green);
+}
+
+.button:hover {
+    color: black;
+    background-color: white;
+    transition: background-color 200ms;
+}

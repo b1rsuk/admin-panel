@@ -1,0 +1,31 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --gray: #e2e2e2;
+  --lime: #5BBA3C;
+  --red: #FF3636;
+  --green: #207E01; 
+  --grey: #A5A5A5;
+  --red2: #A61A1A;
+  --ivory: #E2E2E2; 
+  --silver: #BFBFBF;
+  --black: #0D0D0D;
+  --text: #3A3A3A;
+  --text2: #B7B6B6;
+  --text3: #CDCDCD;
+  --silver: #B9B9B9;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

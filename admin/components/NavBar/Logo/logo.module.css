@@ -1,0 +1,15 @@
+.logo {
+    display: flex;
+    min-width: 180px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    opacity: 0.6;
+}
+
+.logo > h1 {
+    color: var(--lime);
+    font-weight: 800;
+    font-size: 22px;
+}

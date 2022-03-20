@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px;
+}
+
+.button {
+    width: 377px;
+    height: 55px;
+}
+
+@media (max-width: 382px) {
+    .button {
+        width: 330px;
+    }
+}
