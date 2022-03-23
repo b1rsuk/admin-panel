@@ -1,8 +1,10 @@
-.container {
-    height: 100%;
-}
-
 .adaptive {
     width: 600px;
     height: 456px;
+}
+
+.button {
+    height: 85px;
+    display: flex;
+    align-items: flex-end;
 }

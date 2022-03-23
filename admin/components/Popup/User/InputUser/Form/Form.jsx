@@ -19,10 +19,11 @@ const Form = ({ form }) => {
                     }}
                     font={{
                         fontWeight: 500,
-                        fontSize: '18px'
+                        fontSize: '18px',
+                        padding: '8px'
                     }}
-                    rigthSvg={true}
-                    anxiety={form.anxiety}
+                    rigthSvg={form.anxiety}
+                    anxiety={true}
                 />
             </div>                    
         ))

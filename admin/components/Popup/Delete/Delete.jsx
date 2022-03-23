@@ -13,7 +13,7 @@ const Delete = ({ page }) => {
     const close = () => dispatch(visibleDelete());
 
     return (    
-        <Popup visible={visible} title='Удаление данных' centerTitle={true} padding='35px' adaptive={style.adaptive} close={close}>
+        <Popup visible={visible} title='Удаление данных' centerTitle={true} padding='35px' marginBottom='10px' adaptive={style.adaptive} close={close}>
             <Main/>
             <Buttons id={id} close={close} dell={() => postDelete(page, id)}/>
         </Popup>

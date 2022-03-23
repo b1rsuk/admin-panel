@@ -1,11 +1,11 @@
 const right = (setNumbers, numbers, limit) => {
-    if (numbers[0] +4 > limit) return; 
-    setNumbers([
-        numbers[0] +1,
-        numbers[0] +2,
-        numbers[0] +3,
-        numbers[0] +4,
-    ]);
+    if (numbers.length < 4) return;
+    const result = [];
+    for (let i = 0; i < 4; i++) {
+        if (numbers[numbers.length - 1] + i > limit) result.unshift(numbers[numbers.length - 1] - i);
+        else result.push(numbers[numbers.length - 1] + i);
+    } 
+    setNumbers(result);
 }
 
 export default right;

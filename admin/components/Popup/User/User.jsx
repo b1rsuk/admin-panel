@@ -66,7 +66,7 @@ const User = () => {
     const readyValidator = () => validator(alert, login, password, sum, fullName, birchDay, status, setLoginAnxiety, setPasswordAnxiety, setSumAnxiety, setFullNameAnxiety, setBirchDayAnxiety, setStatusAnxiety);
 
     return (
-        <Popup visible={visible} title='Изменить пользователя' padding='20px' adaptive={style.adaptive} close={close}>
+        <Popup visible={visible} title='Изменить пользователя' padding='25px 50px' adaptive={style.adaptive} close={close}>
             <InputUser form={form1} form2={form2}/> 
             <Buttons login={login} password={password} sum={sum} fullName={fullName} birchDay={birchDay} status={status} close={close} readyValidator={readyValidator} readyClearAnxiety={readyClearAnxiety} response={readyResponse}/>
         </Popup>

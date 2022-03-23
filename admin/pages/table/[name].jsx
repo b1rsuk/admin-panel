@@ -20,6 +20,7 @@ import getColumns from '../../components/pageRequest/table/request/getColumns';
 import ButtonCreate from '../../components/ButtonCreate/ButtonCreate';
 import CategoryCreate from '../../components/Popup/CategoryCreate/CategoryCreate';
 import getLimit from '../../components/pageRequest/table/request/getLimit';
+import FastPagination from '../../components/Popup/FastPagination/FastPagination';
 
 const Table = () => {
     const router = useRouter();
@@ -44,6 +45,7 @@ const Table = () => {
             <Delete page={name}/>
             <Note/>
             <CategoryCreate />
+            <FastPagination limit={limitPage} page={`/table/${name}?id=`}/>
             <NavBar page={name}/>
             <ButtonCreate variant={name}/>
             <Pagintation

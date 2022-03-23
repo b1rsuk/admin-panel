@@ -14,8 +14,8 @@ const CategoryButton = ({ id }) => {
         dispatch(visibleDelete());
     }
     const edit = () => {
-        dispatch(visibleCategoryEdit());
         dispatch(setId(id));
+        dispatch(visibleCategoryEdit());
     }
     
     return (

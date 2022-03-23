@@ -1,11 +1,11 @@
 const left = (setNumbers, numbers) => {
-    if (numbers[0] == 0) return; 
-    const result = []; 
-    for (let i = 0; i < 4; i++) {
-        if (numbers[0] - i < 0) break;
-        result.push(numbers[0] - i);
+    const result = [];
+    for (let i = 4; i > 0; i--) {
+        if (numbers[numbers.length -1] - i < 0) continue;
+        result.push(numbers[numbers.length -1] - i);
     }
-    setNumbers(result.reverse());
+    if (numbers.length > result.length) return;
+    setNumbers(result);
 }
 
 export default left;

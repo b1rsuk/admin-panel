@@ -13,15 +13,17 @@ import Category from "../../components/Popup/Category/Category";
 import ButtonCreate from "../../components/ButtonCreate/ButtonCreate";
 import getProduct from "../../components/pageRequest/services/request/getProduct";
 import getLimit from "../../components/pageRequest/services/request/getLimit";
+import FastPagination from '../../components/Popup/FastPagination/FastPagination';
 
 const Services = () => {
     const router = useRouter();
     const dispatch = useDispatch();
     const { id } = router.query;
     const [idPage, setIdPage] = useState(0);
-    const [limitPage, setLimitPage] = useState(0);
+    const [limitPage, setLimitPage] = useState(-1);
     
     useEffect(() => {
+        if (!id) return;
         if (!Number(id) && id != '0') return router.push('/services/0');
         getProduct(dispatch, setArray, id);
         setIdPage(id);
@@ -36,6 +38,7 @@ const Services = () => {
             <Delete page={'services'}/>
             <ProductPopup category={category} setCategory={setCategory}/>
             <ProductCreate category={category} setCategory={setCategory}/>
+            <FastPagination limit={limitPage} page={`/services/`}/>
             <NavBar page={'services'}/>
             <ButtonCreate variant={'position'}/>
             <Pagintation

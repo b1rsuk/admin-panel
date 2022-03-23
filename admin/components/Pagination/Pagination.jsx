@@ -20,16 +20,21 @@ const Pagintation = ({ activeNumber, limit, namePage }) => {
         }
         for (let i = 0; i < 4; i++) {
             if (active +i < limit+1) arr.push(active+i);
+            else if (arr[arr.length-1]-i >= 0) arr.unshift(arr[arr.length-1]-i);
         }
 
+        if (numbers.length > arr.length) return;
         setNumbers(arr);
-    }, [limit])
+    }, [limit, activeNumber]); 
+
     return (
-        <div className={style.container}>
-            <div className={style.pagination}>
-                <Circle numbers={numbers} setNumbers={setNumbers} activeNumber={activeNumber} limit={limit} namePage={namePage}/>
+        <Fragment>
+            <div className={style.container}>
+                <div className={style.pagination}>
+                    <Circle numbers={numbers} setNumbers={setNumbers} activeNumber={activeNumber} limit={limit} namePage={namePage}/>
+                </div>
             </div>
-        </div>
+        </Fragment>
     );
 }
 

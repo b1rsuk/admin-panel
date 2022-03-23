@@ -19,7 +19,7 @@ const Note = () => {
     const save = () => {
         saveNote(textArea, id, array, dispatch, setArray);
         postNote(textArea, id);
-        close();
+        close(); 
     }   
     useEffect(() => {
         array.forEach(e => {
@@ -27,9 +27,9 @@ const Note = () => {
         });
     }, [visible]);
     return (
-        <Popup visible={visible} title='Заметка' padding='20px' marginBottom='20px' adaptive={style.adaptive} close={close}>
-            <div className={style.container}>
-                <Text textArea={textArea} setTextArea={setTextArea}/>
+        <Popup visible={visible} title='Заметка' padding='30px' marginBottom='50px' adaptive={style.adaptive} close={close}>
+            <Text textArea={textArea} setTextArea={setTextArea}/>
+            <div className={style.button}>
                 <Button text='Сохранить' width='181px' height='52px' w={500} f='18px' r='26px' click={save}/>
             </div>
         </Popup>

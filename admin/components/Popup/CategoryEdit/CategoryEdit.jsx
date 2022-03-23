@@ -9,11 +9,10 @@ import { setArray } from '../../app/redux/arraySlice';
 import validator from './validator/validator';
 import save from './save/save';
 import clearAnxiety from './clearAnxiety/clearAnxiety';
-import postEdit from './request/postEdit';
 import { useAlert } from 'react-alert';
 
 const CategoryEdit = () => {
-    const visible = useSelector(state => state.popup.categoryEdit);
+    const visible = useSelector(state => state.popup.visibleCategoryEdit);
     const array = useSelector(state => state.array.array);
     const id = useSelector(state => state.popup.id);
     const [name, setName] = useState('');
@@ -66,8 +65,8 @@ const CategoryEdit = () => {
                                 fontWeight: 500,
                                 fontSize: '18px'
                             }}
-                            rigthSvg={true}
-                            anxiety={e.anxiety}
+                            rigthSvg={e.anxiety}
+                            anxiety={true}
                         />
                     </div>
                 ))

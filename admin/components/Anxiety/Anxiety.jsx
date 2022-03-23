@@ -7,7 +7,7 @@ const Anxiety = ({ anxiety }) => {
     }
     return (
         <div className={style.anxiety} style={anxietyStyle}>
-            <CustomImage src='/anxiety.svg' alt='anxiety' width='8px' height='18px'/>
+            <CustomImage src='/anxiety.svg' alt='anxiety' width='6px' height='16px'/>
         </div>
     );
 }

@@ -1,14 +1,9 @@
 import push from '../push/push';
+import { visibleFastPagination } from '../../../app/redux/popupSlice';
 
-const click = (number, setNumbers, limit, numbers, namePage, router) => {
+const click = (number, index, limit, numbers, namePage, router, dispath) => {
+    if (index == 2 && numbers.length == 4  && limit >= 4)  return dispath(visibleFastPagination());
     push(router, namePage, number);        
-    if (numbers.length < 4) return;
-    const arr = [];
-    for (let i = 0; i < 4; i++) {
-        if (number + i > limit) break;
-        arr.push(number + i);
-    }
-    setNumbers(arr);
 }
 
 export default click;

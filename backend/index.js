@@ -150,6 +150,18 @@ const product = [
     }, 
 ];
 
+const twoPage = [
+    {
+        src: ['/product/divan.png', '/product/png.png'],
+        name: 'sdsd',
+        price: '20020',
+        about: 'abownt',
+        detalis: 'detalis',
+        category: 'category',
+        id: 0
+    }, 
+];
+
 app.post('/authorization', (req, res) => {
     if ( req.body.user == 'borsuk' && req.body.password == 'borsuk') return res.send(true);
     res.send(false);
@@ -162,18 +174,31 @@ app.post('/edit/product', (req, res) => { // редактирвание прод
 });     
 
 app.get('/users/:id', (req, res) => {
-    res.send(users);
+    const result = users.map(e => {
+        e.three = Number(e.three * req.params.id + 1);
+        return e;
+    });
+    res.send(result);
 });
 
 app.get('/cards/:id', (req, res) => {
-    res.send(cards);
+    const result = cards.map(e => {
+        e.four = Number(e.four) + 1 * req.params.id;
+        return e;
+    });
+    res.send(result);
 });
 
 app.get('/category/:id', (req, res) => {
-    res.send(category);
+    const result = category.map(e => {
+        e.three = Number(e.three * req.params.id + 1);
+        return e;
+    });
+    res.send(result);
 });
 
 app.get('/product/:id', (req, res) => {
+    if (req.params.id == 1) return res.send(twoPage);
     res.send(product);
 });
 
@@ -190,7 +215,7 @@ app.get('/limit/cards', (req, res) => {
 });
 
 app.get('/limit/services', (req, res) => {
-    res.send(JSON.stringify(0));
+    res.send(JSON.stringify(1));
 });
 
 app.post('/create/product', (req, res) => {

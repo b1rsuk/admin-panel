@@ -55,10 +55,11 @@ const InputBox = ({ visible, category, product, close }) => {
                             }}
                             font={{
                                 fontWeight: 500,
-                                fontSize: '18px'
+                                fontSize: '18px',
+                                padding: '8px'
                             }}
-                            rigthSvg={true}
-                            anxiety={input.anxiety}
+                            rigthSvg={input.anxiety}
+                            anxiety={true}
                         />
                  </div>
                 ))

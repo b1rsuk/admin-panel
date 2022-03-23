@@ -57,8 +57,8 @@ const CategoryEdit = () => {
                                 fontWeight: 500,
                                 fontSize: '18px'
                             }}
-                            rigthSvg={true}
-                            anxiety={e.anxiety}
+                            rigthSvg={e.anxiety}
+                            anxiety={true}
                         />
                     </div>
                 ))
