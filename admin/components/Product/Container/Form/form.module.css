@@ -23,3 +23,9 @@
     align-items: center;
     overflow: hidden;
 }
+
+.discount {
+    font-size: 10px;
+    margin-bottom: 8px;
+    text-decoration: line-through;
+}

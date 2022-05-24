@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    width: 150px;
+}
+
+.value {
+    width: 230px;
+}

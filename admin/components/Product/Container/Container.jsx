@@ -2,7 +2,6 @@ import style from './container.module.css';
 import Image from './Image/Image';
 import Form from './Form/Form';
 import Buttons from './Buttons/Buttons';
-import { Fragment } from 'react';
 
 const Container = ({src, name, price, id}) => {
     return (

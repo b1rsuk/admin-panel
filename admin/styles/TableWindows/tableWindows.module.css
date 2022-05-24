@@ -3,7 +3,7 @@
 }
 
 .container {
-    min-width: 1600px;
+    min-width: 1000px;
     display: flex;
     justify-content: center;
 }

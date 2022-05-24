@@ -1,4 +1,5 @@
 import postEdit from '../../request/postEditi';
+import translit from '../../../translit';
 
 const validator = (name, price, about, detalis, category, setNameAnxiety, setPriceAnxiety, setAboutAnxiety, close, alert, array, id, dispatch, setArray, product) => {
     if (name.trim() == '') {
@@ -20,6 +21,7 @@ const validator = (name, price, about, detalis, category, setNameAnxiety, setPri
     const copy = JSON.parse(
         JSON.stringify(array)
     );
+    const label = translit(name);
     const result = copy.map(e => {
         if (e.id == id) {
             e.name = name;
@@ -27,10 +29,11 @@ const validator = (name, price, about, detalis, category, setNameAnxiety, setPri
             e.about = about;
             e.detalis = detalis;
             e.category = category;
+            e.label = label;
         }
         return e;
     });
-    postEdit(name, price, about, detalis, category, product.src, id);
+    postEdit(name, price, about, detalis, category, product.src, label, id);
     dispatch(setArray(result));
 }
 export default validator;

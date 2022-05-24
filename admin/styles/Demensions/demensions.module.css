@@ -1,0 +1,10 @@
+.adaptive {
+    width: 500px;
+    height: 500px;
+}
+
+.menu {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}

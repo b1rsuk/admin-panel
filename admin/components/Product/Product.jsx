@@ -5,7 +5,7 @@ const Product = ({product}) => {
     return (
         <div className={style.product}>
             {
-                product.map((product, index) => <Container key={index} src={product.src} name={product.name} price={product.price} id={product.id}/>)
+                product.map((product, index) => <Container key={index} src={product.src} name={product.name} price={{price: product.price[0], discount: product.price[1]}} id={product.id}/>)
             }
         </div>
     );

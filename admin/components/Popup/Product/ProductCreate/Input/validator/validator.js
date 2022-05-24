@@ -1,4 +1,5 @@
 import postCreate from '../../request/postCreate';
+import translit from '../../../translit';
 
 const validator = (name, price, about, detalis, category, setNameAnxiety, setPriceAnxiety, setAboutAnxiety, close, alert, product, dispatch, setArray, array) => {
     if (name.trim() == '') {
@@ -38,8 +39,9 @@ const validator = (name, price, about, detalis, category, setNameAnxiety, setPri
     copy.detalis = detalis;
     copy.category = category;
     copy.id = lastId();
+    const label = translit(name);
     copyArray.push(copy);
     dispatch(setArray(copyArray));
-    postCreate(name, price, about, detalis, category, copy.src, copy.id);
+    postCreate(name, price, about, detalis, category, copy.src, copy.id, label);
 }
-export default validator;
+export default validator; 

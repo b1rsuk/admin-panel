@@ -10,6 +10,8 @@ const initialState = {
   visibleProductCreate: false,
   visibleCategoryCreate: false,
   visibleCategoryEdit: false,
+  visibleDemensions: false,
+  visibleAddDemensions: false,
   visibleFastPagination: false
 }
 
@@ -44,11 +46,17 @@ export const popupSlice = createSlice({
     visibleCategoryCreate: state => {
       state.visibleCategoryCreate = !state.visibleCategoryCreate
     },
+    visibleDemensions: state => {
+      state.visibleDemensions = !state.visibleDemensions
+    },
+    visibleAddDemensions: state => {
+      state.visibleAddDemensions = !state.visibleAddDemensions
+    },
     visibleFastPagination: state => {
       state.visibleFastPagination = !state.visibleFastPagination
     }
   },
 });
 
-export const { visibleProductPopup, visibleDelete, visibleNote, visibleUser, visibleCategory, visibleProductCreate, visibleCategoryEdit, visibleCategoryCreate, visibleFastPagination, setId } = popupSlice.actions;
+export const { visibleProductPopup, visibleDelete, visibleNote, visibleUser, visibleCategory, visibleProductCreate, visibleDemensions, visibleAddDemensions, visibleCategoryEdit, visibleCategoryCreate, visibleFastPagination, setId } = popupSlice.actions;
 export default popupSlice.reducer;

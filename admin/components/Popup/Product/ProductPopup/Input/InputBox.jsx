@@ -5,7 +5,7 @@ import TextArea from '../../../../TextArea/TextArea';
 import Button from '../../../../Button/Button';
 import validator from './validator/validator';
 import clearAnxiety from './clearAnxiety/clearAnxiety';
-import { visibleCategory } from '../../../../app/redux/popupSlice';
+import { visibleCategory, visibleDemensions } from '../../../../app/redux/popupSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { setArray } from '../../../../app/redux/arraySlice';
 import { useAlert } from 'react-alert';
@@ -69,6 +69,12 @@ const InputBox = ({ visible, category, product, close }) => {
                     <h3>Категория</h3>
                 </div>
                 <Button text='Редактировать' width='100%' height='40px' w={500} f='18px' r='20px' click={() => dispatch(visibleCategory())}/>
+            </div>
+            <div className={style.input}>
+                <div className={style.text}>
+                    <h3>Размеры</h3>
+                </div>
+                <Button text='Размеры' width='100%' height='40px' w={500} f='18px' r='20px' click={() => dispatch(visibleDemensions())}/>
             </div>
 
             <div className={style.textArea}>

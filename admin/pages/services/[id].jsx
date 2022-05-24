@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import NavBar from "../../components/NavBar/NavBar";
 import Pagintation from "../../components/Pagination/Pagination";
 import Product from '../../components/Product/Product';
+import Demensions from "../../components/Popup/Demensions/Demensions";
 import ProductPopup from '../../components/Popup/Product/ProductPopup/ProductPopup';
 import Delete from "../../components/Popup/Delete/Delete";
 import ProductCreate from "../../components/Popup/Product/ProductCreate/ProductCreate";
@@ -14,6 +15,7 @@ import ButtonCreate from "../../components/ButtonCreate/ButtonCreate";
 import getProduct from "../../components/pageRequest/services/request/getProduct";
 import getLimit from "../../components/pageRequest/services/request/getLimit";
 import FastPagination from '../../components/Popup/FastPagination/FastPagination';
+import AddDemensions from "../../components/Popup/AddDemensions/AddDemensions";
 
 const Services = () => {
     const router = useRouter();
@@ -31,14 +33,18 @@ const Services = () => {
     }, [id]);
 
     const product = useSelector(state => state.array.array);
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState(''); 
+    const [name, setName] = useState('');
+
     return (
         <Fragment>
             <Category category={category} setCategory={setCategory}/>
+            <AddDemensions name={name} setName={setName}/>
             <Delete page={'services'}/>
             <ProductPopup category={category} setCategory={setCategory}/>
             <ProductCreate category={category} setCategory={setCategory}/>
             <FastPagination limit={limitPage} page={`/services/`}/>
+            <Demensions />
             <NavBar page={'services'}/>
             <ButtonCreate variant={'position'}/>
             <Pagintation

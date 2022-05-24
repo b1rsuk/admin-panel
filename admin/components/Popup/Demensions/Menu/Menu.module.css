@@ -1,0 +1,18 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu > h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.demension {
+    padding-left: 80px;
+}
+
+.demension > h4 {
+    color: var(--text);
+}

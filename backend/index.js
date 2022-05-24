@@ -61,93 +61,18 @@ const product = [
     {
         src: ['/product/png.png', '/product/divan.png'],
         name: 'Png',
-        price: '2000',
+        price: [
+            3450,
+            0
+        ],
         about: 'abount',
         detalis: 'detalis',
         category: 'category',
+        label: 'sd',
+        demensions: [],
         id: 0
     }, 
-    {
-        src: ['/product/divan.png'],
-        name: 'Pn33g', 
-        price: '2000',
-        about: 'abount',
-        detalis: 'detalis',
-        category: 'category',
-        id: 1
-    }, 
-    {
-        src: ['/product/divan.png'],
-        name: 'Pn33g', 
-        price: '2000',
-        about: 'abount',
-        detalis: 'detalis',
-        category: 'category',
-        id: 2
-    }, 
-    {
-        src: ['/product/divan.png'],
-        name: 'Pn33g', 
-        price: '2000',
-        about: 'abount',
-        detalis: 'detalis',
-        category: 'category',
-        id: 3
-    },     
-    {
-        src: ['/product/divan.png'],
-        name: 'Pn33g', 
-        price: '2000',
-        about: 'abount',
-        detalis: 'detalis',
-        category: 'category',
-        id: 4
-    }, 
-    {
-        src: ['/product/divan.png'],
-        name: 'Pn33g', 
-        price: '2000',
-        about: 'abount',
-        detalis: 'detalis',
-        category: 'category',
-        id: 5
-    }, 
-    {
-        src: ['/product/divan.png'],
-        name: 'Pn33g', 
-        price: '2000',
-        about: 'abount',
-        detalis: 'detalis',
-        category: 'category',
-        id: 6
-    }, 
-    {
-        src: ['/product/divan.png'],
-        name: 'Pn33g', 
-        price: '2000',
-        about: 'abount',
-        detalis: 'detalis',
-        category: 'category',
-        id: 7
-    }, 
-    {
-        src: ['/product/divan.png'],
-        name: 'Pn33g', 
-        price: '2000',
-        about: 'abount',
-        detalis: 'detalis',
-        category: 'category',
-        id: 8
-    }, 
-    {
-        src: ['/product/divan.png'],
-        name: 'Pn33g', 
-        price: '2000',
-        about: 'abount',
-        detalis: 'detalis',
-        category: 'category',
-        id: 9
-    }, 
+   
 ];
 
 const twoPage = [
@@ -168,8 +93,8 @@ app.post('/authorization', (req, res) => {
 });
 
 app.post('/edit/product', (req, res) => { // редактирвание продукта
-    const { name, price, about, detalis, category, src, id } = req.body;
-    console.log({ name, price, about, detalis, category, src, id });
+    const { name, price, about, detalis, category, src, label, id } = req.body;
+    console.log({ name, price, about, detalis, category, src, label, id });
     res.end();
 });     
 
@@ -219,8 +144,8 @@ app.get('/limit/services', (req, res) => {
 });
 
 app.post('/create/product', (req, res) => {
-    const { name, price, about, detalis, category, src, id } = req.body;
-    console.log({ name, price, about, detalis, category, src, id });
+    const { name, price, about, detalis, category, src, label, id } = req.body;
+    console.log({ name, price, about, detalis, category, src, label, id });
     res.end();
 });
 
