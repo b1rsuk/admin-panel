@@ -10,18 +10,22 @@ const Demensions = () => {
     const visible = useSelector(state => state.popup.visibleDemensions);
     const id = useSelector(state => state.popup.id);
     const arr = useSelector(state => state.array.array);
+    const createProduct = useSelector(state => state.array.createProduct);
     const dispatch = useDispatch();
     const close = () => dispatch(visibleDemensions());
     const openAddDemension = () => dispatch(visibleAddDemensions());
-    const product = arr.filter(e => e.id == id);
+    const create = createProduct.length === 0;
+    const product = create? arr.filter(e => e.id == id) : createProduct;
+
     return (    
         <Popup visible={visible} title='Размеры' padding='35px' marginBottom='20px' zIndex={2} adaptive={style.adaptive} close={close}>
             <div className={style.menu}>
                 {
-                    product.length == 0? <Fragment /> : product[0].demensions.map((e, index) => <Menu key={index} name={e.name} list={e.list}/>)
+                    product.length == 0? <Fragment /> : product[0].demensions.map((e, index) => <Menu key={index} name={e.name} list={e.list} index={index}/>)
                 }
             </div>
             <ButtonCreate open={openAddDemension}/>
+            <button onClick={() => console.log(createProduct)}>ds</button>
         </Popup>
     );
 }

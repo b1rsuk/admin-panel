@@ -2,9 +2,8 @@ import Popup from '../../Popup/Popup';
 import Image from './Image/Image';
 import InputBox from './Input/InputBox';
 import style from '../../../../styles/ProductPopup/productPopup.module.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { visibleProductPopup } from '../../../app/redux/popupSlice';
-import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { Fragment } from 'react';
 

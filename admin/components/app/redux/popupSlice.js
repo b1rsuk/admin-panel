@@ -12,7 +12,7 @@ const initialState = {
   visibleCategoryEdit: false,
   visibleDemensions: false,
   visibleAddDemensions: false,
-  visibleFastPagination: false
+  visibleFastPagination: false,
 }
 
 export const popupSlice = createSlice({
