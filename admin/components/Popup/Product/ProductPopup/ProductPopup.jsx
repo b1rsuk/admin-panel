@@ -17,7 +17,7 @@ const ProductPopup = ({ category, setCategory }) => {
     useEffect(() => {
         if (!visible) {
             setProduct({});
-            setCategory('');
+            setCategory([]);
             return;
         }
         array.forEach(arr => {

@@ -15,7 +15,7 @@ const Delete = ({ page }) => {
     return (    
         <Popup visible={visible} title='Удаление данных' centerTitle={true} padding='35px' marginBottom='10px' adaptive={style.adaptive} close={close}>
             <Main/>
-            <Buttons id={id} close={close} dell={() => postDelete(page, id)}/>
+            <Buttons id={id} close={close} dell={() => postDelete(page, id)} page={page}/>
         </Popup>
     );
 }

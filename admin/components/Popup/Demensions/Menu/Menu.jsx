@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setArray, setCreateProduct } from '../../../app/redux/arraySlice';
+import delDemension from '../request/delDemension';
 
 const Menu = ({name, list, index}) => {
     const [visibleDelete, setVisibleDelete] = useState(0);
@@ -16,6 +17,7 @@ const Menu = ({name, list, index}) => {
     const create = createProduct.length === 0;
     const copyArr = JSON.parse(JSON.stringify(arr));
     const copyCreate = JSON.parse(JSON.stringify(createProduct));
+
     const deleteMenu = () => {
         if (!create) {
             copyCreate[0].demensions.splice(index, 1);
@@ -23,9 +25,13 @@ const Menu = ({name, list, index}) => {
             return;
         }
         const newArr = copyArr.map(e => {
-            if (e.id == id) e.demensions.splice(index, 1);
+            if (e.id == id) {
+                e.demensions.splice(index, 1);
+                delDemension(index);
+            }
             return e;
         });
+
         dispatch(setArray(newArr));
     }
     

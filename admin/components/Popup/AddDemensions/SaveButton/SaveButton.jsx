@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setArray } from '../../../app/redux/arraySlice';
 import { useAlert } from "react-alert";
 import { setCreateProduct } from '../../../app/redux/arraySlice';
+import postDemensions from '../request/postDemensions';
 
 const SaveButton = ({input, setInput, menu, setMenu, name, setName, close}) => {
     const dispatch = useDispatch();
@@ -27,7 +28,11 @@ const SaveButton = ({input, setInput, menu, setMenu, name, setName, close}) => {
             return;
         }
         const searchArr = copyArr.map(e => {
-            if (e.id == id) e.demensions.push({name: name, list: list});
+            if (e.id == id) {
+                const value = {name: name, list: list};
+                e.demensions.push(value);
+                postDemensions(value);
+            }
             return e;
         });
         dispatch(setArray(searchArr));

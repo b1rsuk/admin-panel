@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
-const ImageCustom = ({src, alt, width, height}) => {
+const ImageCustom = ({src, alt, width, height, fixed = false}) => {
     if (!src) return <Image layout="fixed" src={'/'} alt={alt} width={width} height={height}/>;
     return (
-        <Image src={src} alt={alt} width={width} height={height}/>
+        <Image layout={fixed? "fixed" : ''} src={src} alt={alt} width={width} height={height}/>
     );
 }
 

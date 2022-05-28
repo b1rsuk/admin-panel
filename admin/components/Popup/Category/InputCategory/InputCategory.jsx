@@ -1,23 +1,16 @@
 import Input from '../../../Input/Input';
 import { useState } from 'react';
+import style from './input.module.css';
 
 const InputCategory = ({ category }) => {
     return (
-        <Input 
-            type='text' 
-            styles={{
-                border: '2px solid var(--gray)',
-                borderRadius: '14px',
-                height: '52px',
-                marginBottom: '15px'
-            }}
-            font={{
-                fontWeight: 500,
-                fontSize: '18px'
-            }}
-            readOnly={true}
-            value={category} 
-        />
+        <div className={style.input}>
+            {
+                category.map((e, index) => (
+                    <div className={style.category} key={index}>{e}</div>
+                ))
+            }
+        </div>
     );
 }
 export default InputCategory;

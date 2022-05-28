@@ -1,13 +1,22 @@
 import style from './inputs.module.css';
 import Input from '../../../../Input/Input';
 import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 const Inputs = ({index, input, setInput}) => {
     const [name, setName] = useState('');
     const [value, setValue] = useState('');
+    const visible = useSelector(select => select.popup.visibleAddDemensions);
+
     useEffect(() => {
         input[index] = {name: name, value: value};
     }, [name, value]);
+
+    useEffect(() => {
+        if (!visible) return;
+        setName('');
+        setValue('');
+    }, [visible]);
 
     return (
         <div className={style.container}>

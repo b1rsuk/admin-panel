@@ -25,7 +25,6 @@ const Demensions = () => {
                 }
             </div>
             <ButtonCreate open={openAddDemension}/>
-            <button onClick={() => console.log(createProduct)}>ds</button>
         </Popup>
     );
 }

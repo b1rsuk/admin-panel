@@ -1,0 +1,50 @@
+.tableCategory {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.table {
+    border: 2px solid var(--gray);
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.container {
+    padding: 10px;
+    border-bottom: 2px solid var(--gray);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container:hover {
+    opacity: 0.5;
+}
+
+.add {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    transition: opacity 0.5s;
+}
+
+.add img {
+    z-index: 1;
+    cursor: pointer;
+}
+
+.add img:hover {
+    opacity: 0.8 !important;
+}
+
+.delete {
+    margin-right: 50px;
+    transition: opacity 0.5s;
+}

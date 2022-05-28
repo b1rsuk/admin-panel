@@ -1,0 +1,17 @@
+.input {
+    height: 50px;
+    border: 2px solid var(--gray);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.category {
+    background-color: var(--lime);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--black);
+    margin-right: 8px;
+}

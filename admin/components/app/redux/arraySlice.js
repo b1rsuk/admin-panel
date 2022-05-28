@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   array: [],
+  value: '',
   createProduct: []
 }
 
@@ -14,9 +15,12 @@ export const arraySlice = createSlice({
     },
     setCreateProduct: (state, actions) => {
       state.createProduct = actions.payload;
+    },
+    setValue: (state, actions) => {
+      state.value = actions.payload;
     }
   },
 });
 
-export const { setArray, setCreateProduct } = arraySlice.actions;
+export const { setArray, setCreateProduct, setValue } = arraySlice.actions;
 export default arraySlice.reducer;

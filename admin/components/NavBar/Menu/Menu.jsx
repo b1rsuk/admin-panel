@@ -13,7 +13,7 @@ const Menu = ({ page }) => {
                 <li onClick={() => isPage(dispatch, setArray, page, 'users')}><Link href="/table/users?id=0">Пользователи</Link></li>
                 <li onClick={() => isPage(dispatch, setArray, page, 'services')}><Link href="/services/0">Услуги</Link></li>
                 <li onClick={() => isPage(dispatch, setArray, page, 'cards')}><Link href="/table/cards?id=0">Карты</Link></li>
-                <li onClick={() => isPage(dispatch, setArray, page, 'category')}><Link href="/table/category?id=0">Категории</Link></li>
+                <li onClick={() => isPage(dispatch, setArray, page, 'category')}><Link href="/category/category">Категории</Link></li>
             </ul>
         </div>
     );

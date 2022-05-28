@@ -16,6 +16,8 @@ import getProduct from "../../components/pageRequest/services/request/getProduct
 import getLimit from "../../components/pageRequest/services/request/getLimit";
 import FastPagination from '../../components/Popup/FastPagination/FastPagination';
 import AddDemensions from "../../components/Popup/AddDemensions/AddDemensions";
+import Material from "../../components/Popup/Material/Material";
+import AddMaterial from "../../components/Popup/AddMaterial/AddMaterial";
 
 const Services = () => {
     const router = useRouter();
@@ -33,18 +35,19 @@ const Services = () => {
     }, [id]);
 
     const product = useSelector(state => state.array.array);
-    const [category, setCategory] = useState(''); 
-    const [name, setName] = useState('');
+    const [category, setCategory] = useState([]); 
 
     return (
         <Fragment>
             <Category category={category} setCategory={setCategory}/>
-            <AddDemensions name={name} setName={setName}/>
+            <AddDemensions />
             <Delete page={'services'}/>
             <ProductPopup category={category} setCategory={setCategory}/>
             <ProductCreate category={category} setCategory={setCategory}/>
             <FastPagination limit={limitPage} page={`/services/`}/>
             <Demensions />
+            <AddMaterial />
+            <Material/>
             <NavBar page={'services'}/>
             <ButtonCreate variant={'position'}/>
             <Pagintation

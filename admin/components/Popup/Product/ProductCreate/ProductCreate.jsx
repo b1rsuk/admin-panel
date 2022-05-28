@@ -13,11 +13,13 @@ const ProductCreate = ({ category }) => {
     const defaultState = {
         src: [],
         name: '',
-        price: '',
+        price: [0, 0],
         about: '',
         detalis: '',
         category: category,
         demensions: [],
+        scheme: [],
+        material: [],
         id: 0
     }
     const [product, setProduct] = useState(defaultState); 

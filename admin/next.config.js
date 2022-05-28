@@ -20,6 +20,13 @@ module.exports = {
     limitServices: `http://localhost:5000/limit/services`,
     product: 'http://localhost:5000/product/',
     columns: 'http://localhost:5000/',
-    limitTable: 'http://localhost:5000/limit/'
+    limitTable: 'http://localhost:5000/limit/',
+    demensions: 'http://localhost:5000/demensions',
+    material: 'http://localhost:5000/material',
+    delMaterial: 'http://localhost:5000/delete/material/',
+    categoryTable: 'http://localhost:5000/table/category/',
+    dellCategory: 'http://localhost:5000/delete/category',
+    saveScheme: 'http://localhost:5000/save/scheme',
+    deleteScheme: 'http://localhost:5000/delete/scheme'
   },
 }

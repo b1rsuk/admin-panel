@@ -1,0 +1,40 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.delete {
+    display: flex;
+    justify-content: flex-end;
+    transition: opacity 1s;
+}
+
+.delete img {
+    cursor: pointer;
+}
+
+.delete img:hover {
+    opacity: 0.8;
+}
+
+.menu:hover {
+    opacity: 0.8;
+}
+
+.menu > h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.demension {
+    padding-left: 80px;
+}
+
+.demension > h4 {
+    color: var(--text);
+}
+

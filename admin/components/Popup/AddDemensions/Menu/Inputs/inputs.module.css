@@ -10,3 +10,17 @@
 .value {
     width: 230px;
 }
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .title {
+        width: 100%;
+    }
+
+    .value {
+        width: 100%;
+    }
+}

@@ -1,19 +1,24 @@
 import postEdit from '../../request/postEditi';
 import translit from '../../../translit';
 
-const validator = (name, price, about, detalis, category, setNameAnxiety, setPriceAnxiety, setAboutAnxiety, close, alert, array, id, dispatch, setArray, product) => {
+const validator = (name, price, about, detalis, category, discount, setNameAnxiety, setDiscountAnxiety, setPriceAnxiety, setAboutAnxiety, close, alert, array, id, dispatch, setArray, product) => {
     if (name.trim() == '') {
         setNameAnxiety(true);
         alert.error('Имя не может быть пустым');
         return;
     }
-    if (!Number(price) && price !== '0') {
+    if (!Number(price) && price !== 0) {
         setPriceAnxiety(true);
         alert.error('Цена должна содержать только цифры');
         return;
     }
+    if (!Number(discount) && discount !== 0) {
+        setDiscountAnxiety(true);
+        alert.error('Старая цена должна содержать только цифры');
+        return;
+    }
     if (about.trim() == '') {
-        setAboutAnxiety(true);
+        setAboutAnxiety(true); 
         alert.error('Описание не может быть пустым');
         return;
     }
@@ -25,7 +30,7 @@ const validator = (name, price, about, detalis, category, setNameAnxiety, setPri
     const result = copy.map(e => {
         if (e.id == id) {
             e.name = name;
-            e.price = price;
+            e.price = [price, discount];
             e.about = about;
             e.detalis = detalis;
             e.category = category;

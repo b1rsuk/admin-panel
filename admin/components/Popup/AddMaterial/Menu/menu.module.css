@@ -1,0 +1,33 @@
+.menu {
+    height: 180px;
+    border-radius: 4px;
+    border: 1px solid var(--gray);
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add img {
+    cursor: pointer;
+}
+
+.add img:hover {
+    opacity: 0.8;
+}
+
+.remove img {
+    cursor: pointer;
+}
+
+.remove img:hover {
+    opacity: 0.8;
+}
+
+.remove {
+    margin-right: 10px;
+}

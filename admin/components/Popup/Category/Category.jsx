@@ -22,7 +22,7 @@ const Category = ({ category, setCategory }) => {
     return (
         <Popup visible={visible} zIndex={2} title='Выбор категории' centerTitle={true} padding='35px' adaptive={style.adaptive} close={close} marginBottom='28px'>
             <InputCategory category={category}/>
-            <Choice setCategory={setCategory} menu={menu}/>
+            <Choice category={category} setCategory={setCategory} setMenu={setMenu} menu={menu}/>
             <ButtonCategory setCategory={setCategory} category={category} close={close}/>
         </Popup>   
     );

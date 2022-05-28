@@ -1,0 +1,27 @@
+.scheme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 313px;
+    height: 180px;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow: auto;
+    border: 2px solid var(--silver);
+    border-radius: 5px;
+}
+
+.container {
+    position: relative;
+}
+
+.delete {
+    position: absolute;
+    right: 0;
+    transition: opacity 1s;
+    cursor: pointer;
+}
+
+.delete img:hover {
+    opacity: 0.8;
+}
