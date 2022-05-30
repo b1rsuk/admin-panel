@@ -36,6 +36,7 @@ const TableCategory = ({menuByName, setMenuByName}) => {
               </div>
               <div className={style.container} onClick={() => setMenuByName('')}>Сбросить</div>
                 {table.map(e => { 
+                    console.log(e[menuByName])
                     return e[menuByName].map((e, index) => 
                     <div key={index} className={style.container} onMouseMove={() => setDell(1)} onMouseLeave={() => setDell(0)} onClick={() => setMenuByName(e.title)}>
                         {e.title}

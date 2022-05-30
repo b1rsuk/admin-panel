@@ -37,14 +37,21 @@ const CreateCategory = ({menuByName}) => {
     ];
     const create = () => {
         const copyTable = JSON.parse(JSON.stringify(table));
-        const newTable = copyTable.map(e => {
+        const newTable = copyTable.map(e => { 
             if (menuByName in e) {
-                e[menuByName][title] = [];
-                e[menuByName].push({title: title, marginAndDiscount: [margin, discount], label: translit(title)});
-                postCreateCategory(menuByName, {title: title, marginAndDiscount: [margin, discount], label: translit(title)});   
+                let id = 0;
+                for (const key in e) {
+                    e[key].forEach(e => {
+                        if (e.id > id) id = e.id;
+                    });
+                }
+                e[title] = [];
+                e[menuByName].push({title: title, marginAndDiscount: [margin, discount], label: translit(title), id: id+1});
+                postCreateCategory(menuByName, {title: title, marginAndDiscount: [margin, discount], label: translit(title), id: id+1});   
             }
             return e;
         });
+        console.log(menuByName, newTable)
         dispatch(setArray(newTable));
     }
 
