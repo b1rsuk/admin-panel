@@ -18,8 +18,8 @@ const CreateCategory = ({menuByName}) => {
     const close = () => dispatch(visibleCreateCategory());
     const [title, setTitle] = useState('');
 
-    const [margin, setMargin] = useState('');
-    const [discount, setDiscount] = useState('');
+    const [margin, setMargin] = useState('0');
+    const [discount, setDiscount] = useState('0');
     
     const [marginAnxiety, setMarginAnxiety] = useState(false);
     const [discountAnxiety, setDiscountAnxiety] = useState(false);
@@ -51,7 +51,6 @@ const CreateCategory = ({menuByName}) => {
             }
             return e;
         });
-        console.log(menuByName, newTable)
         dispatch(setArray(newTable));
     }
 

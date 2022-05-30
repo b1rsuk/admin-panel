@@ -94,15 +94,40 @@ const product = [
 ];
 
 const twoPage = [
+   
     {
-        src: ['/product/divan.png', '/product/png.png'],
-        name: 'sdsd',
-        price: '20020',
-        about: 'abownt',
+        src: ['/product/png.png', '/product/divan.png'],
+        name: 'Png',
+        price: [
+            3450,
+            5000
+        ],
+        about: 'abount',
         detalis: 'detalis',
-        category: 'category',
-        id: 0
+        category: [],
+        label: 'sd',
+        demensions: [],
+        scheme: ['/product/scheme/scheme.png', '/product/scheme/scheme.png'],
+        material: [],
+        id: 2
     }, 
+    {
+        src: ['/product/png.png', '/product/divan.png'],
+        name: 'Png2',
+        price: [
+            3470,
+            0
+        ],
+        about: 'abount',
+        detalis: 'detalis',
+        category: [],
+        label: 'sd',
+        demensions: [],
+        scheme: [],
+        material: [{name: 'name', list: [{name: '123'}]}],
+        id: 3
+    }, 
+   
 ];
 
 app.post('/authorization', (req, res) => {
