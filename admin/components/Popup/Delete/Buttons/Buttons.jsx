@@ -9,10 +9,11 @@ const Buttons = ({ id, close, dell, page }) => {
     const dispatch = useDispatch();
     
     const deleteArray = () => {
-        array.forEach((arr, index) => {
-            if (arr.id == id) array.splice(index, 1);
+        const arrayCopy = JSON.parse(JSON.stringify(array));
+        arrayCopy.forEach((arr, index) => {
+            if (arr.id == id) arrayCopy.splice(index, 1);
         });
-        dispatch(setArray(array));
+        dispatch(setArray(arrayCopy));
         dell();
         close();
     };

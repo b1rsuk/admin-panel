@@ -183,7 +183,7 @@ app.get('/limit/category', (req, res) => {
 });
 
 app.get('/limit/cards', (req, res) => {
-    res.send(JSON.stringify(7));
+    res.send(JSON.stringify(0));
 });
 
 app.get('/limit/services', (req, res) => {
