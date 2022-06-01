@@ -36,13 +36,17 @@ const TableCategory = ({menuByName, setMenuByName}) => {
               </div>
               <div className={style.container} onClick={() => setMenuByName('')}>Сбросить</div>
                 {table.map(e => { 
-                    console.log(e[menuByName])
                     return e[menuByName].map((e, index) => 
                     <div key={index} className={style.container} onMouseMove={() => setDell(1)} onMouseLeave={() => setDell(0)} onClick={() => setMenuByName(e.title)}>
-                        {e.title}
+                        <div className={style.product}>
+                            <div className={style.image} style={{
+                                backgroundImage: e.src? `url('${e.src}')` : ''
+                            }}></div>
+                            {e.title}
+                        </div>
                         <div className={style.delete} style={styleDelete} onClick={event => deleted(event, e, menuByName)}>
                             <Image src={'/minus.svg'} width='20px' height='20px'/>
-                        </div>
+                        </div>  
                     </div>
                     )
                 })}

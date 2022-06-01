@@ -27,6 +27,7 @@ module.exports = {
     categoryTable: 'http://localhost:5000/table/category/',
     dellCategory: 'http://localhost:5000/delete/category',
     saveScheme: 'http://localhost:5000/save/scheme',
-    deleteScheme: 'http://localhost:5000/delete/scheme'
+    deleteScheme: 'http://localhost:5000/delete/scheme',
+    saveImageCreate: 'http://localhost:5000/save/image/category'
   },
 }

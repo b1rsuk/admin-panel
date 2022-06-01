@@ -4,7 +4,7 @@ const cors = require('cors');
 app.use(express.json());
 app.use(cors());
 
-const menu = [  { '': [{title: 'Прямые диваны', marginAndDiscount: [0, 1], id: 0}], 'Прямые диваны': [{title: 'Модульные диваны', marginAndDiscount: [0, 0], id: 1}, {title:'Каркасные диваны', marginAndDiscount: [0, 0], id: 2}], 'Модульные диваны': [{title: 'Норм диваны', marginAndDiscount: [0, 1], id: 3}, {title: 'Натуральные диваны', marginAndDiscount: [0, 1], id: 4}], 'Норм диваны':[], 'Натуральные диваны': [], 'Каркасные диваны': [] }]; // '': [] обязательно
+const menu = [  { '': [{title: 'Прямые диваны', src: '/product/divan.png', marginAndDiscount: [0, 1], id: 0}], 'Прямые диваны': [{title: 'Модульные диваны', marginAndDiscount: [0, 0], id: 1}, {title:'Каркасные диваны', marginAndDiscount: [0, 0], id: 2}], 'Модульные диваны': [{title: 'Норм диваны', marginAndDiscount: [0, 1], id: 3}, {title: 'Натуральные диваны', marginAndDiscount: [0, 1], id: 4}], 'Норм диваны':[], 'Натуральные диваны': [], 'Каркасные диваны': [] }]; // '': [] обязательно
 const users = [
     {
         id: 0, // id
@@ -283,6 +283,12 @@ app.post('/delete/scheme', (req, res) => {
     const { src } = req.body;
     console.log(src);
     res.end();
+})
+
+app.post('/save/image/category', (req, res) => {
+    const { img, name } = req.body;
+    console.log(img, name)
+    res.send('/product/scheme/scheme.png');
 })
 
 app.listen(5000, function () {

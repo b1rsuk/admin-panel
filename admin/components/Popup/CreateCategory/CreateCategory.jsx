@@ -9,6 +9,7 @@ import ButtonCreate from './ButtonCreate/ButtonCreate';
 import { setArray } from '../../app/redux/arraySlice';
 import postCreateCategory from './request/postCreateCategory';
 import translit from '../Product/translit';
+import LoadScheme from './LoadScheme/LoadScheme';
 
 const CreateCategory = ({menuByName}) => {
     const visible = useSelector(state => state.popup.visibleCreateCategory);
@@ -59,6 +60,7 @@ const CreateCategory = ({menuByName}) => {
             <InputBox value={title} setValue={setTitle} anxiety={titleAnxiety}/>
             <InputList list={list}/>
             <ButtonCreate margin={margin} title={title}  discount={discount} setMarginAnxiety={setMarginAnxiety} setDiscountAnxiety={setDiscountAnxiety} setTitleAnxiety={setTitleAnxiety} create={create} close={close}/>
+            <LoadScheme/>
         </Popup>    
     );
 }
